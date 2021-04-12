@@ -21,6 +21,7 @@ class App extends React.Component {
     this.setState({
       favorites: this.state.favorites.filter((item) => item.id !== favoriteId),
     });
+    document.getElementById(`marker_${favoriteId}`).remove();
   }
 
   jumpToFavorite(favoriteId) {

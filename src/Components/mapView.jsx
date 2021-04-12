@@ -29,22 +29,22 @@ class MapView extends React.Component {
         fetch(url)
           .then((response) => response.json())
           .then((data) => {
+            const coordinates = data.features[0].geometry.coordinates;
+            const id = data.features[0].properties.foursquare;
+
+            let el = document.createElement("div");
+            el.className = "marker";
+            el.id = `marker_${idnn}`;
+            el.style.backgroundImage =
+              "url('http://maps.google.com/mapfiles/ms/micons/blue.png')";
+            new mapboxGl.Marker(el).setLngLat(coordinates).addTo(map);
+
             let favorite = {
-              id: data.features[0].properties.foursquare,
+              id: id,
               place_name: data.features[0].place_name.split(",")[0],
-              coordinates: data.features[0].geometry.coordinates,
+              coordinates: coordinates,
               category: data.features[0].properties.category,
             };
-
-            const marker = new mapboxGl.Marker()
-              .setLngLat(data.features[0].geometry.coordinates)
-              .setPopup(
-                new mapboxGl.Popup().setHTML(
-                  `<h1>${data.features[0].place_name.split(",")[0]}</h1>`
-                )
-              )
-              .addTo(map);
-            marker.togglePopup();
             this.props.updateFavorites(favorite);
           });
       });
@@ -54,7 +54,17 @@ class MapView extends React.Component {
   };
 
   jumpToFavorite(favorite) {
-    this.state.map.jumpTo({ center: favorite.coordinates });
+    this.state.map.flyTo({
+      center: favorite.coordinates,
+      zoom: 17,
+      bearing: 0,
+      speed: 0.7,
+      curve: 1,
+      easing: function(t) {
+        return t;
+      },
+      essential: true,
+    });
   }
 
   render() {

@@ -1,16 +1,31 @@
-import React from 'react';
-import './app.css';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import MapView from './Components/mapView';
-import Favorites from './Components/favorites';
+import React, { useState } from "react";
+import "./app.css";
+import "mapbox-gl/dist/mapbox-gl.css";
+import MapView from "./Components/mapView";
+import Favorites from "./Components/favorites";
 
-function App() {
-  return (
-    <div className="App">
-      <Favorites></Favorites>
-      <MapView></MapView>
-    </div>
-  )
+class App extends React.Component {
+
+  constructor(){
+    super();
+    this.state = {
+      favorites: []
+    }
+  }
+
+  updateFavorites(favorite) {
+    this.setState({favorites: [...this.state.favorites, favorite]}) 
+    console.log(this.state.favorites, "Parent Component");
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Favorites favorites={this.state.favorites}></Favorites>
+        <MapView updateFavorites={this.updateFavorites.bind(this)}></MapView>
+      </div>
+    );
+  }
 }
 
-export { App };
+export default App;

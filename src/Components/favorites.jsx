@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Favorites extends Component {
-    state = {  }
-    render() {
-        return ( 
-            <div>
-                <h1>Mapbox Favorites</h1>
-                <li>{}</li>
-                <button>Add to Favorites</button>
-                <button>Delete from Favorites</button>
+  render() {
+    return (
+      <div>
+        <h1>Favorites Point of intrests</h1>
+        <ul>
+          {this.props.favorites.map((favorite, i) => (
+            <div key={i}>
+              <li key={i}>
+                {favorite.place_name} <button id={favorite.id}>Delete</button>
+              </li>
             </div>
-         );
-    }
+          ))}
+        </ul>
+      </div>
+    );
+  }
 }
- 
+
 export default Favorites;

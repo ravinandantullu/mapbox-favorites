@@ -2,9 +2,8 @@ import React from "react";
 import mapboxGl from "mapbox-gl";
 import style from "../data/style.json";
 
-// If there are issues, replace with your token
 const ACCESS_TOKEN = "pk.eyJ1IjoiZGFzdWxpdCIsImEiOiJjaXQzYmFjYmkwdWQ5MnBwZzEzZnNub2hhIn0.EDJ-lIfX2FnKhPw3nqHcqg";
-const GEOCODINGAPIURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'; 
+const GEOCODINGURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'; 
 
 class MapView extends React.Component {
   constructor() {
@@ -27,28 +26,20 @@ class MapView extends React.Component {
       });
 
       map.on("click", (e) => {
-        let that = this;
-        console.log("A click event has occurred at " + e.lngLat);
-        let url = `${GEOCODINGAPIURL}${e.lngLat.lng},${e.lngLat.lat}.json?access_token=${ACCESS_TOKEN}&types=poi`; 
-        console.log(url);
+        let url = `${GEOCODINGURL}${e.lngLat.lng},${e.lngLat.lat}.json?access_token=${ACCESS_TOKEN}&types=poi`; 
+     
         fetch(url)
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
-            that.state.mapArray.push({
-              place_name: data.features[0].place_name,
+            let favorite = {
+              id: data.features[0].properties.foursquare,
+              place_name: data.features[0].place_name.split(',')[0],
               coordinates: data.features[0].geometry.coordinates,
-              category: data.features[0].properties.category
-            });
-            console.log(this.state.mapArray);
+              category: data.features[0].properties.category,
+            };
+            this.props.updateFavorites(favorite);
           });
       });
-      
-      var loadSource = () => {
-       
-      };
-
-      map.on("data", loadSource);
 
       this.setState({ map });
     }

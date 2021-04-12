@@ -34,7 +34,7 @@ class MapView extends React.Component {
 
             let el = document.createElement("div");
             el.className = "marker";
-            el.id = `marker_${idnn}`;
+            el.id = `marker_${id}`;
             el.style.backgroundImage =
               "url('http://maps.google.com/mapfiles/ms/micons/blue.png')";
             new mapboxGl.Marker(el).setLngLat(coordinates).addTo(map);

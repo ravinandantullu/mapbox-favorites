@@ -1,15 +1,13 @@
 {
-  "main.css": "/mapbox-favorites/static/css/main.3ffe52f8.chunk.css",
-  "main.js": "/mapbox-favorites/static/js/main.cbe3de29.chunk.js",
-  "main.js.map": "/mapbox-favorites/static/js/main.cbe3de29.chunk.js.map",
-  "static/css/1.1edaeb8a.chunk.css": "/mapbox-favorites/static/css/1.1edaeb8a.chunk.css",
-  "static/js/1.f285a4e4.chunk.js": "/mapbox-favorites/static/js/1.f285a4e4.chunk.js",
-  "static/js/1.f285a4e4.chunk.js.map": "/mapbox-favorites/static/js/1.f285a4e4.chunk.js.map",
+  "main.js": "/mapbox-favorites/static/js/main.ac256cab.chunk.js",
+  "main.js.map": "/mapbox-favorites/static/js/main.ac256cab.chunk.js.map",
+  "static/css/1.650dad83.chunk.css": "/mapbox-favorites/static/css/1.650dad83.chunk.css",
+  "static/js/1.8773db35.chunk.js": "/mapbox-favorites/static/js/1.8773db35.chunk.js",
+  "static/js/1.8773db35.chunk.js.map": "/mapbox-favorites/static/js/1.8773db35.chunk.js.map",
   "runtime~main.js": "/mapbox-favorites/static/js/runtime~main.f7db4aa0.js",
   "runtime~main.js.map": "/mapbox-favorites/static/js/runtime~main.f7db4aa0.js.map",
-  "static/css/1.1edaeb8a.chunk.css.map": "/mapbox-favorites/static/css/1.1edaeb8a.chunk.css.map",
-  "static/css/main.3ffe52f8.chunk.css.map": "/mapbox-favorites/static/css/main.3ffe52f8.chunk.css.map",
+  "static/css/1.650dad83.chunk.css.map": "/mapbox-favorites/static/css/1.650dad83.chunk.css.map",
   "index.html": "/mapbox-favorites/index.html",
-  "precache-manifest.78948255e2af154d71c94b78a2056a94.js": "/mapbox-favorites/precache-manifest.78948255e2af154d71c94b78a2056a94.js",
+  "precache-manifest.48eea868534460a501cc7172c0f0cbab.js": "/mapbox-favorites/precache-manifest.48eea868534460a501cc7172c0f0cbab.js",
   "service-worker.js": "/mapbox-favorites/service-worker.js"
 }

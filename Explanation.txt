@@ -1,0 +1,9 @@
+Description about the Project:
+Added two components:
+FavoriteComponent
+MapViewComponent
+Scss style stylings.
+
+Mapview Component contains the map setup and the markers that are required to display on the map.
+Favorite Component contains the list of the Favorite items.
+

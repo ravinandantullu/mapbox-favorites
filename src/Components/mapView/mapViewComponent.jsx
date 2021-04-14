@@ -36,8 +36,6 @@ class MapViewComponent extends React.Component {
             let el = document.createElement("div");
             el.className = "marker";
             el.id = `marker_${id}`;
-            // el.style.backgroundImage =
-            //   "url('')";
             new mapboxGl.Marker(el).setLngLat(coordinates).addTo(map);
 
             let favorite = {

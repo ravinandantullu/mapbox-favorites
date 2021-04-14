@@ -23,6 +23,10 @@ class FavoritesComponent extends Component {
               </button>
             </div>
           ))}
+          <h3>Instructions:</h3>
+          <h6>1). Click on the map to add POI's to your bucket list.</h6>
+          <h6>2). Use delete button to remove the values from the POI list.</h6>
+          <h6>3). Click on the POI list item to toggle between the POI's</h6>
         </ul>
       </div>
     );

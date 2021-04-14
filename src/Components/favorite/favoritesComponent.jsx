@@ -1,13 +1,14 @@
 import React, { Component } from "react";
+import "./favoritesComponent.scss";
 
-class Favorites extends Component {
+class FavoritesComponent extends Component {
   render() {
     return (
-      <div>
-        <h1>Favorites Point of Intrests</h1>
-        <ul>
+      <div className="favorites">
+        <h1>Points of Interest</h1>
+        <ul className="favorite-list">
           {this.props.favorites.map((favorite, i) => (
-            <div key={i}>
+            <div key={i} className="favorite">
               <li
                 key={i}
                 onClick={() => this.props.jumpToFavorite(favorite.id)}
@@ -28,4 +29,4 @@ class Favorites extends Component {
   }
 }
 
-export default Favorites;
+export default FavoritesComponent;

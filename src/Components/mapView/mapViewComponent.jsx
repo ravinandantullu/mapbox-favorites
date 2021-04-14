@@ -1,12 +1,13 @@
 import React from "react";
 import mapboxGl from "mapbox-gl";
 // import style from "../data/style.json";
+import "./mapViewComponent.scss";
 
 const ACCESS_TOKEN =
   "pk.eyJ1IjoiZGFzdWxpdCIsImEiOiJjaXQzYmFjYmkwdWQ5MnBwZzEzZnNub2hhIn0.EDJ-lIfX2FnKhPw3nqHcqg";
 const GEOCODINGURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/";
 
-class MapView extends React.Component {
+class MapViewComponent extends React.Component {
   constructor() {
     super();
     this.mapContainer = React.createRef();
@@ -35,8 +36,8 @@ class MapView extends React.Component {
             let el = document.createElement("div");
             el.className = "marker";
             el.id = `marker_${id}`;
-            el.style.backgroundImage =
-              "url('http://maps.google.com/mapfiles/ms/micons/blue.png')";
+            // el.style.backgroundImage =
+            //   "url('')";
             new mapboxGl.Marker(el).setLngLat(coordinates).addTo(map);
 
             let favorite = {
@@ -72,4 +73,4 @@ class MapView extends React.Component {
   }
 }
 
-export default MapView;
+export default MapViewComponent;

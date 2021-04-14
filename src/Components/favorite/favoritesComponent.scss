@@ -1,0 +1,38 @@
+.favorites {
+  width: 300px;
+
+  overflow: auto;
+
+  h1 {
+    background-color: #76cff0;
+    margin: 0px;
+    padding: 10px 0;
+    height: 5vh;
+    text-align: center;
+  }
+  ul {
+    padding: 0px;
+    margin: 0;
+    list-style-type: none;
+    height: 90vh;
+    overflow: auto;
+    background-color: #eff8fe;
+    .favorite {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+
+      button {
+        border-radius: 8px;
+        width: 80px;
+        height: 30px;
+        background-color: #c3ecb2;
+      }
+
+      button:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

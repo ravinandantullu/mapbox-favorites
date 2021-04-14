@@ -1,8 +1,8 @@
 import React from "react";
 import "./app.scss";
 import "mapbox-gl/dist/mapbox-gl.css";
-import MapView from "./Components/mapView";
-import Favorites from "./Components/favorites";
+import MapViewComponent from "./Components/mapView/mapViewComponent";
+import FavoritesComponent from "./Components/favorite/favoritesComponent";
 
 class App extends React.Component {
   constructor() {
@@ -32,16 +32,18 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Favorites
+      <div className="app-favorite-map">
+        <FavoritesComponent
+          className="favorite"
           favorites={this.state.favorites}
           deleteFavorite={this.deleteFavorite.bind(this)}
           jumpToFavorite={this.jumpToFavorite.bind(this)}
-        ></Favorites>
-        <MapView
+        ></FavoritesComponent>
+        <MapViewComponent
+          className="map-view"
           ref={this.childRef}
           updateFavorites={this.updateFavorites.bind(this)}
-        ></MapView>
+        ></MapViewComponent>
       </div>
     );
   }

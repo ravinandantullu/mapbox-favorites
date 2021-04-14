@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "9d07a3e1d88a90587df5",
-    "url": "/mapbox-favorites/static/js/main.9d07a3e1.chunk.js"
+    "revision": "8363df55c7b37978b07d",
+    "url": "/mapbox-favorites/static/js/main.8363df55.chunk.js"
   },
   {
     "revision": "697544e15ee7a6f717bf",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/mapbox-favorites/static/js/runtime~main.f7db4aa0.js"
   },
   {
-    "revision": "f0f8794d15e991323efb91c6bbdc1063",
+    "revision": "150e0215a877987ccaa99acc1ba4af2a",
     "url": "/mapbox-favorites/index.html"
   }
 ];

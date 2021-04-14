@@ -1,9 +1,33 @@
-Description about the Project:
-Added two components:
-FavoriteComponent
-MapViewComponent
-Scss style stylings.
+Features:
+Add a POI to a list of favorites by clicking on the map
+Move the map from favorite to favorite by clicking through the list
+Unfavorite POIs
 
-Mapview Component contains the map setup and the markers that are required to display on the map.
-Favorite Component contains the list of the Favorite items.
+Details about the Project:
+Mapview Component:
+  Contains the map setup and the markers that are required to display on the map.
+  Used Geocoding url to get location data with the help of lat and lang values.
+  Added the POI marker on the map using the lat and lang values from the response api.
+  Upated the favorites data with the new location values from the api response.
+  Component also contains the JumptoFavorites method which will enable to fly between the loatcions.
+
+Favorite Component:
+  Contains the list of the Favorite items.
+  And onclick of the favorite item it will highlight the location icons.
+  Had the delete button to remove the favorite items from the map and list.
+
+App Component:
+  Parent componet of the Map and Favorite components.
+  Used as the communication medium between the Map and Favorites components.
+
+Difficulties faced:
+Removing the markers from the map after cliking on the delete button
+  Solution: Removed using the eleement by appling the class with the id value to the marker.
+  Improvement: Need to research how to delete the single value using the marker instance.
+
+Improvements done to the project:
+  Removed all the css files and converted the whole project to accept the SCSS stylings.
+
+Suggetion for improvement:
+  Should save the favorites to DB based on user
 

@@ -16,4 +16,16 @@
     cursor: pointer;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Map_marker.svg/512px-Map_marker.svg.png");
   }
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column-reverse;
+    .favorites {
+      height: 30vh;
+    }
+
+    .map-container {
+      width: 100vw;
+      height: 70vh;
+    }
+  }
 }
